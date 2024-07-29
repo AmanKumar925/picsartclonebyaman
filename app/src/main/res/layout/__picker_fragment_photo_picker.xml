@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/collage_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.recyclerview.widget.RecyclerView android:gravity="center" android:id="@+id/rv_photos" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <View android:background="@color/line_color" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/wrap_folder" android:background="@color/basic_white" android:layout_width="fill_parent" android:layout_height="60.0dip" android:elevation="20.0dip">
+        <ImageView android:id="@+id/directIcon" android:layout_width="20.0dip" android:layout_height="fill_parent" android:src="@drawable/arrow_up" android:layout_marginStart="20.0dip" />
+        <TextView android:textSize="18.0sp" android:textColor="@color/text_color_edit" android:id="@+id/folder" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/all_image" android:layout_marginStart="15.0dip" />
+    </LinearLayout>
+
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/banneradmob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/admob_banner">
+    </com.google.android.gms.ads.AdView>
+
+
+
+</LinearLayout>

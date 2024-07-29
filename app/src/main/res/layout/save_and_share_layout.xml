@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/basic_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/white"
+        android:minHeight="?actionBarSize"
+        android:theme="?actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="?actionBarPopupTheme"
+        app:titleTextColor="@color/text_color_edit" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <FrameLayout
+                    android:id="@+id/adsContainer"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip" />
+
+                <ImageView
+                    android:id="@+id/preview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="300.0dip"
+                    android:layout_margin="15.0dip"
+                    android:adjustViewBounds="true"
+                    android:background="@color/basic_white"
+                    android:src="@drawable/piclist_icon_default"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/adsContainer" />
+
+                <TextView
+                    android:id="@+id/path"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:background="@color/basic_white"
+                    android:gravity="center"
+                    android:padding="10.0dip"
+                    android:textColor="@color/white"
+                    android:textSize="14.0sp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/preview" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/sharebtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    app:cardCornerRadius="5.0dip"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/path">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="50.0dip"
+                        android:paddingRight="50.0dip">
+
+                        <RelativeLayout
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0">
+
+                            <ImageView
+                                android:id="@+id/btnFace"
+                                android:layout_width="64.0dip"
+                                android:layout_height="64.0dip"
+                                android:layout_centerInParent="true"
+                                android:background="?android:selectableItemBackground"
+                                android:padding="8.0dip"
+                                android:src="@drawable/ico_share_fb" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0">
+
+                            <ImageView
+                                android:id="@+id/btnInta"
+                                android:layout_width="64.0dip"
+                                android:layout_height="64.0dip"
+                                android:layout_centerInParent="true"
+                                android:background="?android:selectableItemBackground"
+                                android:padding="8.0dip"
+                                android:src="@drawable/ico_share_ins" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0">
+
+                            <ImageView
+                                android:id="@+id/btnMore"
+                                android:layout_width="64.0dip"
+                                android:layout_height="64.0dip"
+                                android:layout_centerInParent="true"
+                                android:background="?android:selectableItemBackground"
+                                android:padding="8.0dip"
+                                android:src="@drawable/ico_share_more" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sharebtn">
+
+                    <com.google.android.gms.ads.AdView
+                        xmlns:ads="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/banneradmob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        ads:adSize="BANNER"
+                        ads:adUnitId="@string/admob_banner">
+                    </com.google.android.gms.ads.AdView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:id="@+id/nativesave"
+                        android:layout_height="wrap_content">
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gabbar925.photoeditios.editor.featuresfoto.crop.views.SquareLayout xmlns:tools="http://schemas.android.com/tools"
+    android:background="?android:selectableItemBackground" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="MissingClass">
+    <ImageView android:id="@+id/image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="1.0dip" android:scaleType="centerCrop" android:transitionName="@string/transition_view_image" />
+</com.gabbar925.photoeditios.editor.featuresfoto.crop.views.SquareLayout>
