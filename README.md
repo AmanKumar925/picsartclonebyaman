@@ -1,7 +1,7 @@
 # Photo Editing App By Aman
 
 ## Download Test Version of app
-[Download APK](https://github.com/AmanKumar925/picsartclonebyaman/blob/master/app/release/release/app-release.apk)
+[Download APK](https://github.com/AmanKumar925/picsartclonebyaman/raw/master/app/release/release/app-release.apk)
 
 ## Screenshots
 
